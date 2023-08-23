@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+  function isSubstring(str1, str2) {
+
+    if (str1.length > str2.length) {
+      return false;
+    }
+    for (let i = 0; i <= str2.length - str1.length; i++) {
+
+      let j = 0;
+      while (j < str1.length && str1[j] === str2[i + j]) {
+        j++;
+      }
+      if (j === str1.length) {
+        console.log('chuỗi 1 nằm trong chuỗi 2');
+        return true;
+      }
+    }
+    return false;
+  }
+        let str1 = 'helo,my,name';
+        let str2='helo,my,name,is,anh';
+  if (isSubstring(str1,str2)){
+alert('chuỗi 1 nằm trong chuỗi 2')
+  }
+
+</script>
+</body>
+</html>
